@@ -1,0 +1,34 @@
+<div class="size-my-read-me-card">
+  <mat-card-content>
+    <form>
+      <div class="form-group">
+        <label for="lastName">Last Name</label>
+        <input type="text" id="lastName" name="lastName" placeholder="Username" [(ngModel)]="user.name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Email" [(ngModel)]="user.email" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input id="password" name="password" placeholder="Password" [(ngModel)]="user.password" required>
+      </div>
+      <button type="button" class="btn" (click)="onRandom()">Random</button>
+      <button type="button" class="btn" (click)="onAdd()">Add</button>
+      <button type="button" class="btn" (click)="onRefresh()">Refresh</button>
+      <mat-checkbox name="isAutoAdd" [checked]="isAutoAdd" (change)="onAutoAddChange($event.checked)">Auto
+        Add</mat-checkbox>
+    </form>
+  </mat-card-content>
+</div>
+
+<div class="card-container">
+  <mat-accordion>
+    <mat-expansion-panel *ngFor="let user of users">
+      <mat-expansion-panel-header>
+        #{{user.id}} {{ user.username }} {{ user.email }}
+      </mat-expansion-panel-header>
+      <button type="button" class="btn" (click)="onDelete(user.id)">Delete</button>
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>

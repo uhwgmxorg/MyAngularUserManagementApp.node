@@ -1,0 +1,25 @@
+<div id="modal-content-wrapper">
+    <header id="modal-header">
+        <h1 id="modal-title">{{Headline}}</h1>
+    </header>
+    <section id="modal-body">
+        <form class="example-form">
+            <div class="form-field-wrapper">
+                <label for="user-input">User</label>
+                <input [(ngModel)]="InputUser" name="InputUser" placeholder="Username">
+            </div>
+            <div class="form-field-wrapper">
+                <label for="email-input">Email</label>
+                <input [(ngModel)]="InputEmail" name="InputEmail" placeholder="EMail">
+            </div>
+            <div class="form-field-wrapper">
+                <label for="password-input">Password</label>
+                <input [(ngModel)]="InputPassword" name="InputPassword" placeholder="Password">
+            </div>
+        </form>
+    </section>
+    <footer id="modal-footer">
+        <button mat-raised-button id="modal-action-button" (click)="actionFunctionSubmit()">Submit</button>
+        <button mat-raised-button id="modal-cancel-button" (click)="cancelModal()">Cancel</button>
+    </footer>
+</div>

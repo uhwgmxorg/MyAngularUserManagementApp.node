@@ -1,0 +1,52 @@
+<mat-toolbar class="my-custom-element">
+    <mat-toolbar-row>
+
+        <!-- Menu Button -->
+        <button mat-icon-button [matMenuTriggerFor]="menu">
+            <mat-icon>menu</mat-icon>
+        </button>
+
+        <!-- Add the menu items here -->
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item routerLink="/read-me">
+                <mat-icon>help_outline</mat-icon>ReadMe
+            </button>
+            <button mat-menu-item routerLink="/add-user">
+                <mat-icon>add-user</mat-icon>AddUser
+            </button>
+            <button mat-menu-item routerLink="/user-list">
+                <mat-icon>supervisor_account</mat-icon>UserList
+            </button>
+            <button mat-menu-item routerLink="/change-log">
+                <mat-icon>toc</mat-icon>ChangeLog
+            </button>
+        </mat-menu>
+
+        <!-- App Name -->
+        <div class="toolbar-title-container">
+            <span class="toolbar-title">My Angular User Management App</span>
+            <div class="toolbar-separator"></div>
+            <p>Vesion {{version}}</p>
+            <div class="toolbar-separator"></div>
+        </div>
+
+        <!-- Add the buttons and icons here -->
+        <div class="toolbar-buttons">
+            <button mat-icon-button routerLink="/read-me">
+                <mat-icon>help_outline</mat-icon>
+            </button>
+            <button mat-icon-button routerLink="/add-user">
+                <mat-icon>add-user</mat-icon>
+            </button>
+            <button mat-icon-button routerLink="/user-list">
+                <mat-icon>supervisor_account</mat-icon>
+            </button>
+            <button mat-icon-button routerLink="/change-log">
+                <mat-icon>toc</mat-icon>
+            </button>
+        </div>
+
+    </mat-toolbar-row>
+</mat-toolbar>
+
+<router-outlet></router-outlet>

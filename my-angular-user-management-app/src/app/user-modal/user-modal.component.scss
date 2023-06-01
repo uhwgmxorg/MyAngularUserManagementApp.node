@@ -1,0 +1,60 @@
+#modal-content-wrapper {
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+#modal-title {
+    margin: 10px;
+    font-size: 22px;
+}
+
+#modal-body {
+    margin: 10px;
+    font-size: 18px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    text-align: justify;
+    text-justify: inter-word;
+    line-height: 1.5;
+    height: 100%;
+}
+
+#modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#modal-action-button,
+#modal-cancel-button {
+    margin-left: 10px;
+    background-color: #e4e4e4;
+}
+
+.form-field-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+}
+
+.form-field-wrapper label {
+    margin-bottom: 1px;
+    text-align: left;
+    font-weight: bold;
+}
+
+.mat-form-field {
+    width: 100%;
+    margin-top: -8px;
+}
+
+.mat-input-element {
+    text-align: right;
+    padding: 0;
+    margin: 0;
+}

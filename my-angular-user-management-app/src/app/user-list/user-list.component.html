@@ -1,0 +1,24 @@
+<div class="header-container">
+  <h5>UserListPage</h5>
+  <button mat-stroked-button (click)="handleRefresh()">Refresh</button>
+</div>
+
+<div class="card-container">
+  <mat-card *ngFor="let user of users">
+    <div>
+      <mat-card-header>
+        <mat-card-title>#{{user.id}} {{ user.username }}</mat-card-title>
+        <mat-card-subtitle>{{ user.email }}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <button mat-icon-button (click)="openModal(user)">
+          <mat-icon>person</mat-icon>
+        </button>
+      </mat-card-content>
+      <mat-card-actions>
+        <button style="margin-top: 0px;" mat-stroked-button color="warn"
+          (click)="handleUserDeleted(user.id)">Delete</button>
+      </mat-card-actions>
+    </div>
+  </mat-card>
+</div>

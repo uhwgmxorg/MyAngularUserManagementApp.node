@@ -1,0 +1,29 @@
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+$my-app-primary: #b9b9b9;
+$my-app-accent: #505050;
+
+.my-custom-element {
+  background-color: $my-app-primary;
+  color: $my-app-accent;
+  display: flex;
+  align-items: center;
+
+  .toolbar-title-container {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+  }
+
+  .toolbar-title {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  .toolbar-separator {
+    width: 1px;
+    height: 24px;
+    background-color: $my-app-accent;
+    margin: 0 5px;
+  }
+}
